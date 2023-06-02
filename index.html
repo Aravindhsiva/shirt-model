@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T SHIRT CUSTOMIZATION</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .controller {
+            width: 500px;
+            background-color: #dcdcdc;
+            padding: 20px;
+        }
+
+        .form-control {
+            margin-bottom: 10px;
+        }
+
+        .progress-div {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <iframe src="" id="api-frame" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" width="640"
+            height="400"></iframe>
+        <div class="controller position-absolute rounded m-2">
+            <h5>Put a shirt texture</h5>
+            <input type="text" class="form-control" onchange="setShirtUrl(event)" id="shirtInput" />
+            <button onclick="addTextureToModel()" class="btn btn-primary btn-sm">Change</button>
+            <p id="percent" class="m-0"></p>
+        </div>
+        <div class="position-absolute progress-div">
+                <div id="progress"></div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.3.2.js"></script>
+<script type="text/javascript" src="./SketchfabConfigurator-1.0.6.js"></script>
+<script type="text/javascript" src="./script.js"></script>
+
+</html>
